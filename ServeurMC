@@ -1,0 +1,4 @@
+Script de Rémi à édit !
+
+Au niveau de la commande "Installation de JAVA" mettre une redirection sur le nouveau tutoriel
+Ainsi supprimer dans les commandes le -Xms512M (Car cela cause un problème sur les VPS PH)
