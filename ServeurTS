@@ -1,0 +1,99 @@
+TITRE -> INSTALLER UN SERVEUR TEAMSPEAK SUR LINUX
+
+INTRODUCTION
+
+---------------------------------
+
+Bienvenue dans ce tutoriel. Nous allons apprendre à installer facilement Java8 sous Linux.
+
+
+Avant de commencer, vérifiez que vous disposez de ces pré-requis:
+
+Sur votre ordinateur :
+
+le logiciel PuTTY, pour accéder à la console de votre serveur, téléchargeable gratuitement sur https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html .
+
+Sur votre VPS :
+
+Un OS (système) à jour (si cela n'est pas fais, tapez les commandes ci-dessous) :
+
++ apt-get update
++ apt-get upgrade
+
+---------------------------------
+
+Installation du Serveur TeamSpeak (3.7.1)
+
+---------------------------------
+
+Etape 1 : Utilisateur
+
++ adduser teamspeak
+
+Suivez les indications
+
+Etape 2 : Changement d'utilisteur
+
++ su teamspeak
+
+Etape 3 : Changer de dossier (Dossier de l'utilisateur)
+
++ cd
+
+Etape 4 : Téléchargement des archives du serveur TeamSpeak
+
++ http://dl.4players.de/ts/releases/3.7.1/teamspeak3-server_linux_amd64-3.7.1.tar.bz2
+
+Etape 5 : Décompression
+
++ tar jxvf teamspeak3-server_linux_amd64-3.5.0.tar.bz2
+
+Etape 6 : Renommer en ServeurTS
+
++ mv teamspeak3-server_linux_amd64/ ServeurTS/
+
+Etape 7 : Supprimer l'archive compressée
+
++ rm teamspeak3-server_linux_amd64-3.5.0.tar.bz2
+
+Etape 8 : Changer de dossier (Dossier du serveur TeamSpeak)
+
++ cd ServeurTS
+
+Etape 9 : Accepter la licence
+
++ nano .ts3server_license_accepted
+
+Changez le "license_accepted=0" par "license_accepted=1"
+
+Effectuez la CTRL + X
+Tapez Y
+Appuyez sur la touche "Entrée"
+
+Etape 10 : Démarrage
+
+Pour démarrer votre serveur, tapez la commande :
+
++ ./ts3server_startscript.sh start
+
+ATTENTION ! DES INFORMATIONS ESSENTIELLES VONT VOUS ÉTRE DONNER ! SAUVEGARDEZ LES ET GARDEZ LES PRIVÉ !
+
+---------------------------------
+
+GESTION DU SERVEUR TEAMSPEAK
+
+---------------------------------
+
+Pour gérer votre serveur teamspeak (Démarrer/Arrêter/Redémarrer).
+
+Allez dans le dossier du serveur TeamSpeak
+
++ cd /home/teamspeak/ServeurTS/
+
+Tapez :
+
++ ./ts3server_startscript.sh (start/stop/restart)
+
+---------------------------------
+
+Pour toute question, n'hésitez-pas à contacter l'auteur de ce tutoriel ou le support par ticket.
